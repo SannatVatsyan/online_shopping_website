@@ -1,0 +1,326 @@
+body{
+  background-color: rgb(219, 239, 240);
+}
+/* Navigation Bar */
+ nav{
+  background-color: rgb(175, 215, 255);
+}
+#mainnav li{
+    display:inline;
+    list-style-type:none;
+    padding:0.25em;
+    overflow:hidden;
+    display: inline-block;
+}
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    border: none;
+    outline: none;
+    padding: 0.25em;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(143, 199, 255);
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+ #logo{ 
+  position:absolute; 
+	top:0; 
+	left:0;
+  display: inline-block;
+    } 
+  /* Style the search box inside the navigation bar */
+.searchbar input[type=text] {
+  
+  padding: 6px;
+  margin-top: 5px;
+  margin-right: 13px;
+  font-size: 13px;
+  border: 1px solid black;
+}
+.poster
+{
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 100%;
+}
+
+.box{
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  }
+
+.box img{
+  border-bottom: 1px solid black;
+}
+
+.productList{
+  display:inline;
+  list-style-type:none;
+  padding:0.25em;
+  overflow:hidden;
+  display: inline-block;
+}
+
+.productList h4{
+  padding-left: 7px;
+}
+
+.rightalign{
+  border: none;
+  color: rgb(217, 245, 198);
+  padding: 5px 11px;
+  text-align: center;
+  text-decoration:rgb(106, 206, 201);
+  display: inline-block;
+  font-size: 16px;
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.heading{
+  background-color: rgb(169, 190, 230);
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+table, th, td {
+  border: 1px solid;
+  padding: 3px;
+  text-align: left;
+}
+th {
+  background-color: #dbe2c0;
+}
+tr:nth-child(even)
+{
+  background-color: #f2f2f2;
+}
+.foot
+{
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(165, 203, 209);
+  color: white;
+  text-align: center;
+  height: 50px;
+}
+
+
+/* CART */
+
+.row {
+  display: flex;
+  border: 1px solid black;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+  height: auto; /* Should be removed. Only for demonstration */
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#myBtn
+{
+  font-size: 20px;
+  padding: 10px 24px;
+  border-radius: 12px;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  width: 50%;
+  background-color: rgb(179, 179, 179);
+  text-align: center;
+}
+
+
+/* ORDER */
+
+.order{
+  display: flex;
+  border: 1px solid black;
+  padding: 5px;
+}
+.order .img{
+  border: 1px solid black;
+}
+.order .content{
+  padding: 6px;
+  width: 500px;
+  clear: both;
+}
+.order .content input {
+  width: 100%;
+  clear: both;
+}
+
+.end{
+  text-align: center;
+  text-decoration: underline wavy blue 1px;
+  color:red
+}
+
+
+/* PROFILE */
+
+.container{
+  padding: 6px;
+  width: 500px;
+  clear: both;
+}
+.container input{
+  width: 100%;
+  clear: both;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ABOUT US */
+
+#heading
+{
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}

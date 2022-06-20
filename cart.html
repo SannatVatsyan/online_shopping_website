@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8>
+    <title>Assignment_part2</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <script src="pricecal.js"></script> <!-- javascrit link -->
+</head>
+
+<body>
+    <nav> <!-- navigation tab -->
+        <ul id="mainnav">
+            <li>
+                <div id="logo">
+                    <img src="img/826954.png" alt="logo" width="65" height="65"> <!-- brand logo -->
+                </div>
+            </li>
+            <li>
+
+                <div class="dropdown"> <!-- dropdown menu -->
+                    <button class="dropbtn">MEN<i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="product.html">Top Wear</a>
+                        <a href="product.html">Bottom Wear</a>
+                        <a href="product.html">Accessories</a>
+                    </div>
+                </div>
+
+            </li>
+            <li>
+
+                <div class="dropdown"> <!-- dropdown menu -->
+                    <button class="dropbtn">WOMEN</i><i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="product.html">Top Wear</a>
+                        <a href="product.html">Bottom Wear</a>
+                        <a href="product.html">Accessories</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+
+                <div class="dropdown"> <!-- dropdown menu -->
+                    <button class="dropbtn">KIDS</i><i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="product.html">Top Wear</a>
+                        <a href="product.html">Bottom Wear</a>
+                        <a href="product.html">Accessories</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+
+                <div class="dropdown"> <!-- dropdown menu -->
+                    <button class="dropbtn">BEAUTY</i><i class="fa fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="product.html">Men</a>
+                        <a href="product.html">Women</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                    <form class="searchbar" action="home.php" method="get"> <!-- search bar -->
+                        <input type="text" id="productSearch" name="productSearch" placeholder="Search..">
+                    </form>
+                </div>
+            </li>
+            <li>
+                <div class="rightalign"> <!-- order page link -->
+                    <button><a href="order.html">Order</a></button>
+                </div>
+            </li>
+            <li>
+                <div class="rightalign"> <!-- cart page link -->
+                    <button><a href="cart.html">Cart</a></button>
+                </div>
+            </li>
+            <li>
+                <div class="rightalign"> <!-- profile page link -->
+                    <button><a href="profile.php">Profile</a></button>
+                </div>
+            </li>
+
+        </ul>
+    </nav>
+
+    <h3>Your Cart items</h3>
+
+    <div class="row"> <!-- cart item description -->
+        <div class="column">
+            <img src="https://t4.ftcdn.net/jpg/04/39/59/19/240_F_439591914_jZyp0drOWKphjmIrmJsjVrXdmIo58sSh.jpg"
+                width="300px" , height="200px" />
+        </div>
+        <div class="column">
+            <label>
+                <h4>Product ID</h4> <!-- product description -->
+            </label>
+            <input type="text" value="2839126543" readonly>
+            <div>
+                <label for="quantity1" class="form-label"><b>Quantity</b></label><br><br>
+                <input type="number" id="quantity1" class="form-control" oninput="myFunction()"> <!-- click event to calculate price acc. to iten quantity -->
+            </div>
+            <br>
+            <div>
+                <label for="price1" class="form-label"><b>Price</b></label><br><br>
+                <input type="number" class="form-control" id="price1" value=280 readonly oninput="myFunction()"> <!-- click event to calculate price acc. to iten quantity -->
+            </div>
+            <hr>
+
+
+            <h4>Total Price: $<span id="totalPrice1">0</span></h4> <!-- total price after calculation -->
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <img src="https://t3.ftcdn.net/jpg/04/14/40/48/240_F_414404870_ITUoUcTPQKp4Ds1AxmFm1Eeq5JYrPoKY.jpg"
+                width="300px" , height="200px" />
+        </div>
+        <div class="column">
+            <label>
+                <h4>Product ID</h4> <!-- product description -->
+            </label>
+            <input type="text" value="2839126543" readonly>
+
+            <br><br>
+
+            <div>
+                <label for="quantity2" class="form-label"><b>Quantity</b></label><br><br>
+                <input type="number" id="quantity2" class="form-control" oninput="sumFunction()"><!-- click event to calculate price acc. to iten quantity -->
+            </div>
+            <br>
+            <div>
+                <label for="price2" class="form-label"><b>Price</b></label><br><br>
+                <input type="number" class="form-control" id="price2" value=350 readonly oninput="sumFunction()"> <!-- click event to calculate price acc. to iten quantity -->
+            </div>
+            <hr>
+
+
+            <h4>Total Price: $<span id="totalPrice2">0</span></h4> <!-- total price after calculation -->
+            <br>
+        </div>
+    </div>
+    <p class="end">YOU DON'T HAVE ANYTHING ELSE IN YOUR CART</p>
+
+    <!-- Trigger/Open The Modal -->
+
+    <button id="myBtn">Confirm Booking</button><br><br><br>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p><b>Thank You for your Order. <br>You will shortly recieve a confirmation mail regarding your order.</b>
+            </p>
+        </div>
+
+    </div>
+
+    <script>
+        // reference from "https://www.w3schools.com/howto/howto_css_modals.asp"
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <footer class="foot">
+        <a href="aboutUs.html">About Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="contactUs.html">Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="feedback.html">Feedback</a>
+    </footer>
+    
+</body>
+
+</html>
